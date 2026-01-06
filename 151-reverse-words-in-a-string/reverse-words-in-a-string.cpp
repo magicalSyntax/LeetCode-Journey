@@ -7,16 +7,9 @@ public:
         while(ss >> word){
             words.push_back(word);
         }
-
-        int start = 0;
-        int end = words.size()-1;
-        while(start < end){
-            swap(words[start++], words[end--]);
-        }
-
         string ans;
-        for(int i = 0; i < words.size(); i++){
-            if(i > 0) ans += " ";
+        for(int i = words.size()- 1; i >= 0; i--){
+            if(i < words.size()-1) ans += " ";
             ans += words[i];
         }
 
