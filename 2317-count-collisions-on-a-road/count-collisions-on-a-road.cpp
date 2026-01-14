@@ -7,9 +7,8 @@ public:
         while(i < n && dir[i] == 'L') i++;
         while(j >= 0 && dir[j] == 'R') j--;
         int count = 0;
-        while(i <= j){
-            if(dir[i] != 'S') count++;
-            i++;
+        for(int k = i; k <= j; k++){
+            if(dir[k] != 'S') count++;
         }
         return count;
     }
