@@ -3,10 +3,9 @@ public:
     void rotate(vector<int>& nums, int k) {
         int n = nums.size();
         k = k % n;
-        vector<int> temp(n);
+        vector<int> temp(nums);
         for(int i = 0; i < n; i++){
-            temp[(i+k) % n] = nums[i];
+            nums[(i+k) % n] = temp[i];
         }
-        nums = temp;
     }
 };
